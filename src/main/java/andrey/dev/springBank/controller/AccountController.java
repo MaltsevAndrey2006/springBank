@@ -3,6 +3,7 @@ package andrey.dev.springBank.controller;
 
 import andrey.dev.springBank.config.ApplicationConfig;
 import andrey.dev.springBank.model.Account;
+import andrey.dev.springBank.services.Account.AccountService;
 import andrey.dev.springBank.services.Account.InMemoryAccountServiceImpl;
 import andrey.dev.springBank.services.TransferService;
 import lombok.AllArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/v1/Accounts")
 @AllArgsConstructor
 public class AccountController {
-    private InMemoryAccountServiceImpl inMemoryAccountService;
+    private AccountService inMemoryAccountService;
 
     @PostMapping("Create_Account")
     Account createAccount(@RequestBody Account account) {

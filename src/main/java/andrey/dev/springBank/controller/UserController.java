@@ -4,6 +4,7 @@ package andrey.dev.springBank.controller;
 import andrey.dev.springBank.model.User;
 import andrey.dev.springBank.repositores.InMemoryUserRepository;
 import andrey.dev.springBank.services.User.InMemoryUserServiceImpl;
+import andrey.dev.springBank.services.User.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1/Users")
 @AllArgsConstructor
 public class UserController {
-    InMemoryUserServiceImpl inMemoryUserService;
+    private UserService inMemoryUserService;
 
     @PostMapping("createUser")
     public User createUser(@RequestBody User user) {

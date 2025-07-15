@@ -12,4 +12,11 @@ public class User {
     private String userLogin;
     private List<Account> accountList;
 
+    public void addToAccountList(Account account) {
+        accountList.add(account);
+    }
+
+    public void deleteFromAccountList(Account account) {
+        accountList.remove(account);
+    }
 }

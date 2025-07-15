@@ -21,6 +21,7 @@ public class InMemoryAccountServiceImpl implements AccountService {
     public Account createAccount(Account account) {
         if (restTemplate.getForObject(USER_SERVICE_URL + "/" + account.getUserId(), User.class) != null) {
             inMemoryAccountRepository.addToAccountList(account);
+            restTemplate.getForObject(USER_SERVICE_URL + "/" + account.getUserId(), User.class).addToAccountList(account);
             return account;
         }
         return null;
@@ -59,6 +60,7 @@ public class InMemoryAccountServiceImpl implements AccountService {
     @Override
     public void deleteAccount(int accountId) {
         if (inMemoryAccountRepository.findAccountById(accountId) != null) {
+            restTemplate.getForObject(USER_SERVICE_URL + "/" + inMemoryAccountRepository.findAccountById(accountId).getUserId(), User.class).deleteFromAccountList(inMemoryAccountRepository.findAccountById(accountId));
             inMemoryAccountRepository.deleteAccountFromAccountList(accountId);
         }
     }

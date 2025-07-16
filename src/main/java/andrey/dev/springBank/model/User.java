@@ -3,6 +3,8 @@ package andrey.dev.springBank.model;
 import lombok.Builder;
 import lombok.Data;
 
+import javax.annotation.processing.Generated;
+import java.util.ArrayList;
 import java.util.List;
 
 @Builder
@@ -10,7 +12,8 @@ import java.util.List;
 public class User {
     private int userId;
     private String userLogin;
-    private List<Account> accountList;
+    @Generated("Lombok")
+    private List<Account> accountList = new ArrayList<>();
 
     public void addToAccountList(Account account) {
         accountList.add(account);

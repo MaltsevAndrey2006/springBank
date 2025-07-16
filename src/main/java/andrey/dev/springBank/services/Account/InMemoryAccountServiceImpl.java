@@ -2,12 +2,11 @@ package andrey.dev.springBank.services.Account;
 
 import andrey.dev.springBank.model.Account;
 import andrey.dev.springBank.model.User;
-import andrey.dev.springBank.repositores.InMemoryAccountRepository;
+import andrey.dev.springBank.repositores.InMemory.InMemoryAccountRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

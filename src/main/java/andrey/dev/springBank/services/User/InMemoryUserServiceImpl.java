@@ -1,7 +1,7 @@
 package andrey.dev.springBank.services.User;
 
 import andrey.dev.springBank.model.User;
-import andrey.dev.springBank.repositores.InMemoryUserRepository;
+import andrey.dev.springBank.repositores.InMemory.InMemoryUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class InMemoryUserServiceImpl implements UserService {
-    InMemoryUserRepository inMemoryUserRepository;
+   private  InMemoryUserRepository inMemoryUserRepository;
 
     @Override
     public User createUser(User user) {

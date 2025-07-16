@@ -1,6 +1,5 @@
-package andrey.dev.springBank.repositores;
+package andrey.dev.springBank.repositores.InMemory;
 
-import andrey.dev.springBank.config.ApplicationConfig;
 import andrey.dev.springBank.model.Account;
 import org.springframework.stereotype.Repository;
 

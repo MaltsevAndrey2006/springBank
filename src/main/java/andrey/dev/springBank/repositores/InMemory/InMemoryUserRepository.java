@@ -1,4 +1,4 @@
-package andrey.dev.springBank.repositores;
+package andrey.dev.springBank.repositores.InMemory;
 
 import andrey.dev.springBank.model.User;
 import org.springframework.stereotype.Repository;
